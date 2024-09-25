@@ -199,6 +199,8 @@ public class cli {
                     break;
                 }
             }   
+            
+            System.out.print("\n");
         }
             
         
