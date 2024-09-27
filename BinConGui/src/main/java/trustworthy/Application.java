@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Application;
+package trustworthy;
 
 /**
  *
@@ -33,6 +33,7 @@ public class Application extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         TextArea.setColumns(20);
+        TextArea.setLineWrap(true);
         TextArea.setRows(5);
         jScrollPane1.setViewportView(TextArea);
 
@@ -48,23 +49,22 @@ public class Application extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(105, 105, 105)
-                        .addComponent(Button, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(152, 152, 152)
+                .addComponent(Button, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53)
-                .addComponent(Button, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addGap(37, 37, 37)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(Button, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         pack();
@@ -72,91 +72,93 @@ public class Application extends javax.swing.JFrame {
 
     private void ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonActionPerformed
         String text = TextArea.getText().toString();
-        if(text.charAt(0) != '1' || text.charAt(0) != '0')
+        TextArea.setText("");
+        String output = "";
+        if(text.charAt(0)!= '1' && text.charAt(0) != '0')
         {
             for(int i = 0;i < text.length(); i++)
             {
                 switch(text.charAt(i)) {
                     case 'a':
-                        System.out.print("01100001 ");
+                        output = output + "01100001 ";
                     break;
                     case 'b':
-                        System.out.print("01100010 ");
+                        output = output + ("01100010 ");
                     break;
                     case 'c':
-                        System.out.print("01100011 ");
+                        output = output + ("01100011 ");
                     break;
                     case 'd':
-                        System.out.print("01100100 ");
+                        output = output + ("01100100 ");
                     break;
                     case 'e':
-                        System.out.print("01100101 ");
+                        output = output + ("01100101 ");
                     break;
                     case 'f':
-                        System.out.print("01100110");
+                        output = output + ("01100110 ");
                     break;
                     case 'g':
-                        System.out.print("01100111 ");
+                        output = output + ("01100111 ");
                     break;
                     case 'h':
-                        System.out.print("01101000 ");
+                        output = output + ("01101000 ");
                     break;
                     case 'i':
-                        System.out.print("01101001 ");
+                        output = output + ("01101001 ");
                     break;
                     case 'j':
-                        System.out.print("01101010");
+                        output = output + ("01101010 ");
                     break;
                     case 'k':
-                        System.out.print("01101011 ");
+                        output = output + ("01101011 ");
                     break;
                     case 'l':
-                        System.out.print("01101100");
+                        output = output + ("01101100 ");
                     break;
                     case 'm':
-                        System.out.print("01101101 ");
+                        output = output + ("01101101 ");
                     break;
                     case 'n':
-                        System.out.print("01101110 ");
+                        output = output + ("01101110 ");
                     break;
                     case 'o':
-                        System.out.print("01101111 ");
+                        output = output + ("01101111 ");
                     break;
                     case 'p':
-                        System.out.print("01110000 ");
+                        output = output + ("01110000 ");
                     break;
                     case 'q':
-                        System.out.print("01110001 ");
+                        output = output + ("01110001 ");
                     break;
                     case 'r':
-                        System.out.print("01110010 ");
+                        output = output + ("01110010 ");
                     break;
                     case 's':
-                        System.out.print("01110011 ");
+                        output = output + ("01110011 ");
                     break;
                     case 't':
-                        System.out.print("01110100 ");
+                        output = output + ("01110100 ");
                     break;
                     case 'u':
-                        System.out.print("01110101 ");
+                        output = output + ("01110101 ");
                     break;
                     case 'v':
-                        System.out.print("01110110 ");
+                        output = output + ("01110110 ");
                     break;
                     case 'w':
-                        System.out.print("01110111 ");
+                        output = output + ("01110111 ");
                     break;
                     case 'x':
-                        System.out.print("01111000 ");
+                        output = output + ("01111000 ");
                     break;
                     case 'y':
-                        System.out.pring("01111001 ");
+                        output = output + ("01111001 ");
                     break;
                     case 'z':
-                        System.out.print("01111010 ");
+                        output = output + ("01111010 ");
                     break;
                     case ' ':
-                        System.out.print("00100000 ");
+                        output = output + ("00100000 ");
                     break;
                          
                            
@@ -164,94 +166,95 @@ public class Application extends javax.swing.JFrame {
             }
         }
         else {
-            String[] toCon = text.split(" ");
-            for(String a: toCon) {
-                switch(a) {
+            String[] toCon = text.split("\s");
+            for(int i = 0; i < toCon.length; i++) {
+                switch(toCon[i]) {
                     case "01100001":
-                        TextArea.setText("a");
+                        output = output + ("a");
                         break;
                     case "01100010":
-                        TextArea.setText("b");
+                        output = output + ("b");
                     break;
                     case "01100011":
-                        System.out.print('c');
+                        output = output + ('c');
                     break;
                     case "01100100":
-                        System.out.print('d');
+                        output = output + ('d');
                     break;
                     case "01100101":
-                        System.out.print('e');
+                        output = output + ('e');
                     break;
                     case "01100110":
-                        System.out.print('f');
+                        output = output + ('f');
                     break;
                     case "01100111":
-                        System.out.print('g');
+                        output = output + ('g');
                     break;
                     case "01101000":
-                        System.out.print('h');
+                        output = output + ('h');
                     break;
                     case "01101001":
-                        System.out.print('i');
+                        output = output + ('i');
                     break;
                     case "01101010":
-                        System.out.print('j');
+                        output = output + ('j');
                     break;
                     case "01101011":
-                        System.out.print('k');
+                        output = output + ('k');
                     break;
                     case "01101100":
-                        System.out.print('l');
+                        output = output + ('l');
                     break;
                     case "01101101":
-                        System.out.print('m');
+                        output = output + ('m');
                     break;
                     case "01101110":
-                        System.out.print('n');
+                        output = output + ('n');
                     break;
                     case "01101111":
-                        System.out.print('o');
+                        output = output + ('o');
                     break;
                     case "01110000":
-                        System.out.print('p');
+                        output = output + ('p');
                     break;
                     case "01110001":
-                        System.out.print('q');
+                        output = output + ('q');
                     break;
                     case "01110010":
-                        System.out.print('r');
+                        output = output + ('r');
                     break;
                     case "01110011":
-                        System.out.print('s');
+                        output = output + ('s');
                     break;
                     case "01110100":
-                        System.out.print('t');
+                        output = output + ('t');
                     break;
                     case "01110101":
-                        System.out.print('u');
+                        output = output + ('u');
                     break;
                     case "01110110":
-                        System.out.print('v');
+                        output = output + ('v');
                     break;
                     case "01110111":
-                        System.out.print('w');
+                        output = output + ('w');
                     break;
                     case "01111000":
-                        System.out.print('x');
+                        output = output + ('x');
                     break;
                     case "01111001":
-                        System.out.print('y');
+                        output = output + ('y');
                     break;
                     case "01111010":
-                        System.out.print('z');
+                        output = output + ('z');
                     break;
                     case "00100000":
-                        System.out.print(' ');
+                        output = output + (' ');
                     break;
                 }
             }
             
         }
+        TextArea.setText(output);
     }//GEN-LAST:event_ButtonActionPerformed
 
     /**
